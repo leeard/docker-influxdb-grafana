@@ -36,5 +36,5 @@ grafana:
 
 # Global volumes
 volumes:
-  influx-qaauto
-  grafana-qaauto
+  influx-qaauto:
+  grafana-qaauto:
