@@ -10,7 +10,7 @@ influxdb:
   volumes:
     # Data persistency
     # sudo mkdir -p /srv/docker/influxdb/data
-    - influx-qaauto:/var/lib/influxdb
+    - influx_qaauto:/var/lib/influxdb
 
 telegraf:
   image: telegraf:latest
@@ -32,9 +32,9 @@ grafana:
   volumes:
     # Data persistency
     # sudo mkdir -p /srv/docker/grafana/data; chown 472:472 /srv/docker/grafana/data
-    - grafana-qaauto:/var/lib/grafana
+    - grafana_qaauto:/var/lib/grafana
 
 # Global volumes
 volumes:
-  influx-qaauto:
-  grafana-qaauto:
+  influx_qaauto:
+  grafana_qaauto:
