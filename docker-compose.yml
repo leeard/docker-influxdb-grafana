@@ -15,8 +15,6 @@ influxdb:
 telegraf:
   image: telegraf:latest
   container_name: telegraf
-  depends_on:
-    - influxdb
   links:
     - influxdb
   volumes:
@@ -31,8 +29,6 @@ grafana:
     - "3000:3000"
   env_file:
     - 'env.grafana'
-  depends_on:
-    - influxdb
   links:
     - influxdb
   volumes:
