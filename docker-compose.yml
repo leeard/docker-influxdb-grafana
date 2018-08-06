@@ -27,13 +27,14 @@ grafana:
   container_name: grafana
   ports:
     - "3000:3000"
+  command: bash -c "chown -Rv 472:472 ./grafana_restore"
   env_file:
     - 'env.grafana'
   links:
     - influxdb
   volumes:
     # Data persistency
-    # sudo mkdir -p /srv/docker/grafana/data; chown 472:472 /srv/docker/grafana/data
+    #chown 472:472 /srv/docker/grafana/data
     - ./grafana_restore/var_lib_grafana:/var/lib/grafana:rw
     - ./grafana_restore/etc_grafana:/etc/grafana
 
