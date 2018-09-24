@@ -36,3 +36,4 @@ grafana:
     - influxdb
   volumes:
     - grafana:/var/lib/grafana
+    - ./grafana_restore/etc_grafana:/etc/grafana
